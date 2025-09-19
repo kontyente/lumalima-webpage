@@ -8,155 +8,130 @@ import Footer from "@/components/Footer";
 
 export default function Services() {
   const { t } = useLanguage();
-  const [scrollY, setScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState<boolean[]>([]);
   const servicesRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const services = [
     {
       titleKey: "services.design",
       descKey: "services.design.desc",
-      image: "/assets/services/design.jpg",
-      color: "from-blue-500/20 to-indigo-500/20"
+      image: "/assets/services/design.jpg"
     },
     {
       titleKey: "services.consultation",
       descKey: "services.consultation.desc",
-      image: "/assets/services/consulting.jpg",
-      color: "from-green-500/20 to-emerald-500/20"
+      image: "/assets/services/consulting.jpg"
     },
     {
       titleKey: "services.installation",
       descKey: "services.installation.desc",
-      image: "/assets/services/instalation.jpg",
-      color: "from-orange-500/20 to-red-500/20"
+      image: "/assets/services/instalation.jpg"
     },
     {
       titleKey: "services.maintenance",
       descKey: "services.maintenance.desc",
-      image: "/assets/services/maintenance.jpg",
-      color: "from-purple-500/20 to-pink-500/20"
+      image: "/assets/services/maintenance.jpg"
     }
   ];
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = servicesRefs.current.findIndex(ref => ref === entry.target);
+          if (index !== -1) {
+            setIsVisible(prev => {
+              const newVisible = [...prev];
+              newVisible[index] = entry.isIntersecting;
+              return newVisible;
+            });
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
+    );
+
+    servicesRefs.current.forEach(ref => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f5f5f7] overflow-hidden">
+    <div className="min-h-screen bg-[#f5f5f7]">
       <Navigation />
 
-      {/* Hero floating images */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="absolute transition-transform duration-1000 ease-out opacity-10"
-            style={{
-              transform: `translateY(${scrollY * (0.1 + index * 0.02)}px) rotate(${scrollY * 0.02 * (index % 2 === 0 ? 1 : -1)}deg)`,
-              left: `${20 + index * 20}%`,
-              top: `${10 + index * 15}%`,
-            }}
-          >
-            <img
-              src={service.image}
-              alt=""
-              className="w-32 h-32 object-cover rounded-2xl shadow-2xl"
-            />
-          </div>
-        ))}
-      </div>
-
-      <main className="relative z-10 w-full px-6 pb-16">
+      <main className="w-full px-6 pb-16">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 pt-20">
-            <h1
-              className="text-6xl font-light text-[#1d1d1f] mb-8 tracking-tight"
-              style={{
-                transform: `translateY(${scrollY * 0.1}px)`,
-              }}
-            >
+          <div className="text-center mb-16 pt-8">
+            <h1 className="text-5xl font-light text-[#1d1d1f] mb-8 tracking-tight">
               {t('services.title')}
             </h1>
-            <p
-              className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
-              style={{
-                transform: `translateY(${scrollY * 0.05}px)`,
-              }}
-            >
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               {t('services.subtitle')}
             </p>
           </div>
 
-          <div className="space-y-32 mb-20">
+          <div className="space-y-16 mb-16">
             {services.map((service, index) => (
               <div
                 key={index}
                 ref={(el) => {
                   servicesRefs.current[index] = el;
                 }}
-                className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${service.color} backdrop-blur-sm border border-white/20`}
+                className={`relative bg-white rounded-3xl shadow-sm hover:shadow-lg transition-all duration-700 transform ${
+                  isVisible[index]
+                    ? 'translate-y-0 opacity-100'
+                    : 'translate-y-8 opacity-0'
+                }`}
                 style={{
-                  transform: `translateX(${index % 2 === 0 ? '-' : ''}${Math.max(0, (scrollY - index * 300) * 0.1)}px)`,
-                  opacity: Math.max(0.3, 1 - Math.abs(scrollY - index * 400) / 800),
+                  transitionDelay: `${index * 100}ms`
                 }}
               >
-                <div className="flex flex-col lg:flex-row items-center min-h-[600px]">
-                  <div className={`lg:w-1/2 p-12 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                    <h3 className="text-4xl font-medium text-[#1d1d1f] mb-8 tracking-tight">
+                <div className={`flex flex-col lg:flex-row items-center overflow-hidden rounded-3xl ${
+                  index % 2 === 0 ? '' : 'lg:flex-row-reverse'
+                }`}>
+                  <div className="lg:w-1/2 p-8 lg:p-12">
+                    <h3 className="text-3xl font-medium text-[#1d1d1f] mb-6 tracking-tight">
                       {t(service.titleKey)}
                     </h3>
-                    <div className="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
+                    <div className="text-gray-600 leading-relaxed text-lg whitespace-pre-line">
                       {t(service.descKey)}
                     </div>
                   </div>
-                  <div className={`lg:w-1/2 p-8 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div
-                      className="relative group"
-                      style={{
-                        transform: `translateY(${(scrollY - index * 200) * 0.05}px) scale(${1 + Math.sin(scrollY * 0.01 + index) * 0.05})`,
-                      }}
-                    >
+                  <div className="lg:w-1/2 relative group">
+                    <div className="relative overflow-hidden">
                       <img
                         src={service.image}
                         alt={t(service.titleKey)}
-                        className="w-full h-80 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-80 lg:h-96 object-cover transition-transform duration-500 group-hover:scale-110"
+                        style={{
+                          filter: 'sepia(100%) contrast(1.2)',
+                          transition: 'filter 0.5s ease, transform 0.5s ease'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.filter = 'sepia(0%) contrast(1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.filter = 'sepia(100%) contrast(1.2)';
+                        }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </div>
                 </div>
-
-                {/* Animated background elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-xl"
-                     style={{
-                       transform: `translate(${Math.sin(scrollY * 0.01 + index) * 20}px, ${Math.cos(scrollY * 0.01 + index) * 20}px)`,
-                     }}
-                ></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full blur-xl"
-                     style={{
-                       transform: `translate(${Math.cos(scrollY * 0.015 + index) * 15}px, ${Math.sin(scrollY * 0.015 + index) * 15}px)`,
-                     }}
-                ></div>
               </div>
             ))}
           </div>
 
-          <div className="text-center relative z-20">
-            <div
-              style={{
-                transform: `scale(${1 + Math.sin(scrollY * 0.005) * 0.05})`,
-              }}
+          <div className="text-center">
+            <Link
+              href="/contact"
+              className="inline-block bg-[#1d1d1f] text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105"
             >
-              <Link
-                href="/contact"
-                className="inline-block bg-[#1d1d1f] text-white px-12 py-6 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-110 hover:shadow-2xl"
-              >
-                {t('services.cta')}
-              </Link>
-            </div>
+              {t('services.cta')}
+            </Link>
           </div>
         </div>
       </main>
