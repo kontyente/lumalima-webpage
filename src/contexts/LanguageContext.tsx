@@ -135,7 +135,7 @@ Specialties:
 
 Consultancy modalities:
 • Complete projects - personalized budget based on complexity and area
-• One-off consultancy sessions - €150/hour (minimum 2 hours)
+• One-off consultancy sessions - personalized pricing
 • Construction supervision - value to be defined according to duration
 
 We invite you to a free initial meeting where we assess your needs and present the best approach for your project. Contact us to schedule.`,
@@ -326,7 +326,7 @@ Especialidades:
 
 Modalidades de consultoria:
 • Projetos completos - orçamento personalizado baseado na complexidade e área
-• Sessões de consultoria pontuais - €150/hora (mínimo 2 horas)
+• Sessões de consultoria pontuais - preços personalizados
 • Acompanhamento de obra - valor a definir conforme duração
 
 Convidamos para uma reunião inicial gratuita onde avaliamos as suas necessidades e apresentamos a melhor abordagem para o seu projeto. Contacte-nos para agendar.`,
@@ -518,7 +518,7 @@ Spezialgebiete:
 
 Beratungsmodalitäten:
 • Komplette Projekte - personalisiertes Budget basierend auf Komplexität und Fläche
-• Einzelberatungssitzungen - €150/Stunde (Minimum 2 Stunden)
+• Einzelberatungssitzungen - personalisierte Preise
 • Baubegleitung - Preis je nach Dauer zu definieren
 
 Wir laden Sie zu einem kostenlosen Erstgespräch ein, in dem wir Ihre Bedürfnisse bewerten und den besten Ansatz für Ihr Projekt vorstellen. Kontaktieren Sie uns für einen Termin.`,

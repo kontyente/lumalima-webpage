@@ -23,13 +23,13 @@ export default function Home() {
 
   const handlePreloadComplete = () => {
     setIsPreloading(false);
-    
+
     // Trigger content animation after preloading completes
     const contentTimer = setTimeout(() => setShowContent(true), 100);
-    
+
     // Start image reveal after header and title are visible
     const imageTimer = setTimeout(() => setShouldRevealImages(true), 800);
-    
+
     // Cleanup timers if component unmounts
     return () => {
       clearTimeout(contentTimer);
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
