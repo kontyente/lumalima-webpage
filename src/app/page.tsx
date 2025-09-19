@@ -12,7 +12,7 @@ const categories = [
   { key: "housing", href: "/housing", image: "/assets/housing_main.jpg" },
   { key: "comercial", href: "/comercial", image: "/assets/comercial_main.jpg" },
   { key: "public", href: "/public", image: "/assets/public_main.png" },
-  { key: "urban", href: "/urban", image: "/assets/urban_main.jpg" },
+  { key: "urban", href: "/urban", image: "/assets/urban_main.jpg" }
 ];
 
 export default function Home() {
