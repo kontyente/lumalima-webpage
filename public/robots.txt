@@ -1,0 +1,26 @@
+# Robots.txt for Lumalima Illumination Atelier
+# https://lumalima.com
+
+User-agent: *
+Allow: /
+
+# Allow all pages for indexing
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /housing
+Allow: /comercial
+Allow: /public
+Allow: /urban
+
+# Disallow admin or API endpoints
+Disallow: /api/
+
+# Allow all image assets
+Allow: /assets/
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://lumalima.com/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
