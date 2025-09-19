@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import LumaLamp from "@/components/LumaLamp";
-import { motion } from "framer-motion";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -64,36 +62,16 @@ export default function Services() {
     <div className="min-h-screen bg-[#f5f5f7]">
       <Navigation />
 
-      {/* Hero Section with Lamp Effect */}
-      <LumaLamp>
-        <motion.h1
-          initial={{ opacity: 0.5, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="mt-8 bg-gradient-to-br from-[#1d1d1f] to-[#8b7355] py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-        >
-          {t('services.title')}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0.5, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.5,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="mt-6 text-xl text-[#1d1d1f]/70 max-w-2xl mx-auto leading-relaxed text-center"
-        >
-          {t('services.subtitle')}
-        </motion.p>
-      </LumaLamp>
-
-      <main className="w-full px-6 pb-16 bg-[#f5f5f7] relative z-10">
-        <div className="max-w-6xl mx-auto -mt-40">
+      <main className="w-full px-6 pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 pt-8">
+            <h1 className="text-5xl font-light text-[#1d1d1f] mb-8 tracking-tight">
+              {t('services.title')}
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              {t('services.subtitle')}
+            </p>
+          </div>
 
           <div className="space-y-16 mb-16">
             {services.map((service, index) => (
