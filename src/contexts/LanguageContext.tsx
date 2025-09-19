@@ -118,13 +118,58 @@ const translations: Record<Language, Record<string, string>> = {
     'services.title': 'Our Services',
     'services.subtitle': 'Comprehensive illumination solutions from concept to completion',
     'services.design': 'Lighting Design',
-    'services.design.desc': 'Custom lighting solutions tailored to your space and needs',
+    'services.design.desc': 'Lumalima offers bespoke lighting design solutions that transcend the conventional. With Raquel\'s active participation in international lighting and architecture fairs, we stay at the forefront of global trends and emerging technologies.
+
+Our unique sensibility combines refined technique with artistic vision, creating environments that don\'t just illuminate, but transform spaces into experiences. Working from our two offices - Portugal and Switzerland - we offer an international and multicultural perspective to every project.
+
+Each solution is developed considering the architectural, functional and emotional specificities of the space. We use cutting-edge software for 3D simulations and precise lighting calculations, ensuring the final result corresponds exactly to the conceptual vision.',
     'services.consultation': 'Consultation',
-    'services.consultation.desc': 'Expert advice on lighting strategy and implementation',
+    'services.consultation.desc': 'Our specialized consultancy spans multiple areas of expertise: residential, commercial, hospitality, retail, public spaces and urban lighting. We offer strategic advice from the conceptual phase to final implementation.
+
+Specialties:
+• Energy auditing and sustainability
+• Compliance with international standards
+• Integration with home automation systems
+• Circadian lighting for wellness
+• Heritage lighting design
+
+Consultancy modalities:
+• Complete projects - personalized budget based on complexity and area
+• One-off consultancy sessions - €150/hour (minimum 2 hours)
+• Construction supervision - value to be defined according to duration
+
+We invite you to a free initial meeting where we assess your needs and present the best approach for your project. Contact us to schedule.',
     'services.installation': 'Installation',
-    'services.installation.desc': 'Professional installation and setup of lighting systems',
+    'services.installation.desc': 'Lumalima works exclusively with properly certified partners with extensive experience in technical and decorative lighting installations. All our partners have the necessary certifications and strictly follow safety standards.
+
+Installation services:
+• Technical coordination and project management
+• Installation of LED and conventional lighting systems
+• Integration with control and home automation systems
+• Complete testing and commissioning
+
+Construction supervision:
+We offer on-site supervision during critical installation phases, ensuring every detail is executed according to the project. This technical supervision ensures that final results correspond exactly to what was intended, both aesthetically and functionally.
+
+All work includes warranty and complete technical documentation for future maintenance.',
     'services.maintenance': 'Maintenance',
-    'services.maintenance.desc': 'Ongoing support and maintenance for optimal performance',
+    'services.maintenance.desc': 'Our maintenance services are adapted to the specific type of lighting installed. We offer everything from one-off interventions to comprehensive preventive maintenance packages.
+
+Maintenance packages:
+• Residential LED lighting - Annual package with 2 technical visits
+• Commercial lighting - Quarterly maintenance with performance reports
+• Facade and exterior lighting - Biannual package with specialized cleaning
+• Smart control systems - Software updates and calibrations
+
+Included services:
+• Complete technical inspection
+• Replacement of worn components
+• Specialized luminaire cleaning
+• Control system verification
+• Energy efficiency reports
+• Telephone technical support
+
+Proper maintenance extends system lifespan, maintains energy efficiency and ensures optimal performance over time. Our packages can be customized according to the specific needs of each installation.',
     'services.cta': 'Get in Touch',
     
     // Contact page
@@ -266,13 +311,58 @@ const translations: Record<Language, Record<string, string>> = {
     'services.title': 'Os Nossos Serviços',
     'services.subtitle': 'Soluções de iluminação abrangentes do conceito à conclusão',
     'services.design': 'Design de Iluminação',
-    'services.design.desc': 'Soluções de iluminação personalizadas adaptadas ao seu espaço e necessidades',
+    'services.design.desc': 'A Lumalima oferece soluções de design de iluminação personalizadas que transcendem o convencional. Com a participação ativa da Raquel em feiras internacionais de iluminação e arquitetura, mantemo-nos na vanguarda das tendências globais e tecnologias emergentes.
+
+A nossa sensibilidade única combina técnica apurada com visão artística, criando ambientes que não apenas iluminam, mas que transformam espaços em experiências. Trabalhamos desde os nossos dois escritórios - Portugal e Suíça - oferecendo uma perspetiva internacional e multicultural a cada projeto.
+
+Cada solução é desenvolvida considerando as especificidades arquitetónicas, funcionais e emocionais do espaço. Utilizamos software de última geração para simulações 3D e cálculos luminotécnicos precisos, garantindo que o resultado final corresponde exatamente à visão conceptual.',
     'services.consultation': 'Consultoria',
-    'services.consultation.desc': 'Aconselhamento especializado sobre estratégia e implementação de iluminação',
+    'services.consultation.desc': 'A nossa consultoria especializada abrange múltiplas áreas de expertise: residencial, comercial, hotelaria, retail, espaços públicos e iluminação urbana. Oferecemos aconselhamento estratégico desde a fase conceptual até à implementação final.
+
+Especialidades:
+• Auditoria energética e sustentabilidade
+• Compliance com normas internacionais
+• Integração com sistemas domóticos
+• Iluminação circadiana para bem-estar
+• Design de iluminação para espaços patrimoniais
+
+Modalidades de consultoria:
+• Projetos completos - orçamento personalizado baseado na complexidade e área
+• Sessões de consultoria pontuais - €150/hora (mínimo 2 horas)
+• Acompanhamento de obra - valor a definir conforme duração
+
+Convidamos para uma reunião inicial gratuita onde avaliamos as suas necessidades e apresentamos a melhor abordagem para o seu projeto. Contacte-nos para agendar.',
     'services.installation': 'Instalação',
-    'services.installation.desc': 'Instalação e configuração profissional de sistemas de iluminação',
+    'services.installation.desc': 'A Lumalima trabalha exclusivamente com parceiros devidamente certificados e com vasta experiência em instalações de iluminação técnica e decorativa. Todos os nossos parceiros possuem as certificações necessárias e seguem rigorosamente as normas de segurança.
+
+Serviços de instalação:
+• Coordenação técnica e gestão de projeto
+• Instalação de sistemas de iluminação LED e convencionais
+• Integração com sistemas de controlo e domótica
+• Testes e comissionamento completo
+
+Acompanhamento de obra:
+Oferecemos acompanhamento presencial durante as fases críticas de instalação, garantindo que cada detalhe é executado conforme o projeto. Esta supervisão técnica assegura que os resultados finais correspondem exatamente ao pretendido, tanto em termos estéticos como funcionais.
+
+Todos os trabalhos incluem garantia e documentação técnica completa para futuras manutenções.',
     'services.maintenance': 'Manutenção',
-    'services.maintenance.desc': 'Suporte contínuo e manutenção para desempenho ótimo',
+    'services.maintenance.desc': 'Os nossos serviços de manutenção são adaptados ao tipo específico de iluminação instalada. Oferecemos desde intervenções pontuais até pacotes de manutenção preventiva abrangentes.
+
+Pacotes de manutenção:
+• Iluminação LED residencial - Pacote anual com 2 visitas técnicas
+• Iluminação comercial - Manutenção trimestral com relatórios de performance
+• Iluminação de fachadas e exterior - Pacote semestral com limpeza especializada
+• Sistemas de controlo inteligente - Atualizações de software e calibrações
+
+Serviços incluídos:
+• Inspeção técnica completa
+• Substituição de componentes com desgaste
+• Limpeza especializada de luminárias
+• Verificação de sistemas de controlo
+• Relatórios de eficiência energética
+• Suporte técnico telefónico
+
+A manutenção adequada prolonga a vida útil dos sistemas, mantém a eficiência energética e garante o desempenho ótimo ao longo do tempo. Os nossos pacotes podem ser personalizados conforme as necessidades específicas de cada instalação.',
     'services.cta': 'Entre em Contacto',
     
     // Contact page
@@ -415,13 +505,58 @@ const translations: Record<Language, Record<string, string>> = {
     'services.title': 'Unsere Dienstleistungen',
     'services.subtitle': 'Umfassende Beleuchtungslösungen vom Konzept bis zur Fertigstellung',
     'services.design': 'Lichtdesign',
-    'services.design.desc': 'Maßgeschneiderte Beleuchtungslösungen für Ihren Raum und Ihre Bedürfnisse',
+    'services.design.desc': 'Lumalima bietet maßgeschneiderte Lichtdesign-Lösungen, die das Konventionelle übertreffen. Durch Raquels aktive Teilnahme an internationalen Beleuchtungs- und Architekturmessen bleiben wir an der Spitze globaler Trends und aufkommender Technologien.
+
+Unsere einzigartige Sensibilität verbindet raffinierte Technik mit künstlerischer Vision und schafft Umgebungen, die nicht nur beleuchten, sondern Räume in Erlebnisse verwandeln. Von unseren beiden Büros - Portugal und Schweiz - aus bieten wir eine internationale und multikulturelle Perspektive für jedes Projekt.
+
+Jede Lösung wird unter Berücksichtigung der architektonischen, funktionalen und emotionalen Besonderheiten des Raums entwickelt. Wir verwenden modernste Software für 3D-Simulationen und präzise Beleuchtungsberechnungen, um sicherzustellen, dass das Endergebnis genau der konzeptionellen Vision entspricht.',
     'services.consultation': 'Beratung',
-    'services.consultation.desc': 'Expertenberatung zu Beleuchtungsstrategie und -implementierung',
+    'services.consultation.desc': 'Unsere spezialisierte Beratung umfasst mehrere Expertisebereiche: Wohnbereich, Gewerbe, Gastgewerbe, Einzelhandel, öffentliche Räume und Stadtbeleuchtung. Wir bieten strategische Beratung von der Konzeptphase bis zur finalen Umsetzung.
+
+Spezialgebiete:
+• Energieaudit und Nachhaltigkeit
+• Compliance mit internationalen Standards
+• Integration in Hausautomationssysteme
+• Circadiane Beleuchtung für Wohlbefinden
+• Beleuchtungsdesign für denkmalgeschützte Objekte
+
+Beratungsmodalitäten:
+• Komplette Projekte - personalisiertes Budget basierend auf Komplexität und Fläche
+• Einzelberatungssitzungen - €150/Stunde (Minimum 2 Stunden)
+• Baubegleitung - Preis je nach Dauer zu definieren
+
+Wir laden Sie zu einem kostenlosen Erstgespräch ein, in dem wir Ihre Bedürfnisse bewerten und den besten Ansatz für Ihr Projekt vorstellen. Kontaktieren Sie uns für einen Termin.',
     'services.installation': 'Installation',
-    'services.installation.desc': 'Professionelle Installation und Einrichtung von Beleuchtungssystemen',
+    'services.installation.desc': 'Lumalima arbeitet ausschließlich mit ordnungsgemäß zertifizierten Partnern mit umfangreicher Erfahrung in technischen und dekorativen Beleuchtungsinstallationen. Alle unsere Partner verfügen über die notwendigen Zertifizierungen und befolgen strikt die Sicherheitsstandards.
+
+Installationsdienstleistungen:
+• Technische Koordination und Projektmanagement
+• Installation von LED- und konventionellen Beleuchtungssystemen
+• Integration in Steuerungs- und Hausautomationssysteme
+• Komplette Tests und Inbetriebnahme
+
+Baubegleitung:
+Wir bieten Vor-Ort-Betreuung während kritischer Installationsphasen und stellen sicher, dass jedes Detail gemäß dem Projekt ausgeführt wird. Diese technische Überwachung gewährleistet, dass die Endergebnisse genau dem entsprechen, was beabsichtigt war, sowohl ästhetisch als auch funktional.
+
+Alle Arbeiten beinhalten Garantie und vollständige technische Dokumentation für zukünftige Wartungen.',
     'services.maintenance': 'Wartung',
-    'services.maintenance.desc': 'Kontinuierliche Unterstützung und Wartung für optimale Leistung',
+    'services.maintenance.desc': 'Unsere Wartungsdienstleistungen sind an die spezifische Art der installierten Beleuchtung angepasst. Wir bieten alles von einzelnen Eingriffen bis hin zu umfassenden präventiven Wartungspaketen.
+
+Wartungspakete:
+• Wohn-LED-Beleuchtung - Jahrespaket mit 2 technischen Besuchen
+• Gewerbliche Beleuchtung - Vierteljährliche Wartung mit Leistungsberichten
+• Fassaden- und Außenbeleuchtung - Halbjährliches Paket mit spezialisierter Reinigung
+• Intelligente Steuerungssysteme - Software-Updates und Kalibrierungen
+
+Inklusive Dienstleistungen:
+• Vollständige technische Inspektion
+• Austausch von Verschleißteilen
+• Spezialisierte Leuchtenreinigung
+• Überprüfung der Steuerungssysteme
+• Energieeffizienz-Berichte
+• Telefonischer technischer Support
+
+Ordnungsgemäße Wartung verlängert die Systemlebensdauer, erhält die Energieeffizienz und gewährleistet optimale Leistung über die Zeit. Unsere Pakete können entsprechend den spezifischen Bedürfnissen jeder Installation angepasst werden.',
     'services.cta': 'Kontakt aufnehmen',
     
     // Contact page

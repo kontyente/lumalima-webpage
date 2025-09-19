@@ -41,15 +41,15 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="space-y-8 mb-16">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-2xl font-medium text-[#1d1d1f] mb-4 tracking-tight">
+              <div key={index} className="bg-white rounded-3xl p-10 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-3xl font-medium text-[#1d1d1f] mb-6 tracking-tight">
                   {t(service.titleKey)}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <div className="text-gray-600 leading-relaxed text-lg whitespace-pre-line">
                   {t(service.descKey)}
-                </p>
+                </div>
               </div>
             ))}
           </div>
