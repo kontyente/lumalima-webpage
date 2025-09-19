@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const museumImages = Array.from({ length: 8 }, (_, i) => `/assets/museums/${i + 1}.jpg`);
 
 // Generate park image paths
-const parkImages = Array.from({ length: 10 }, (_, i) => `/assets/parks/${i + 1}.jpg`);
+const parkImages = Array.from({ length: 3 }, (_, i) => `/assets/parks/${i + 1}.jpg`);
 
 // Debug: log the generated paths
 console.log('Generated public image paths:', { museumImages, parkImages });
