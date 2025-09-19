@@ -100,12 +100,12 @@ export default function Services() {
                       {t(service.descKey)}
                     </div>
                   </div>
-                  <div className="lg:w-1/2 relative group">
-                    <div className="relative overflow-hidden">
+                  <div className="w-full lg:w-1/2 relative group pt-6 lg:p-6">
+                    <div className="relative overflow-hidden rounded-b-2xl lg:rounded-2xl">
                       <img
                         src={service.image}
                         alt={t(service.titleKey)}
-                        className="w-full h-80 lg:h-96 object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-80 lg:h-96 object-cover transition-transform duration-500 group-hover:scale-110 rounded-b-2xl lg:rounded-2xl"
                         style={{
                           filter: 'sepia(100%) contrast(1.2)',
                           transition: 'filter 0.5s ease, transform 0.5s ease'

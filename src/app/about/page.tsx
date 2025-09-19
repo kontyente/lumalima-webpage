@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -10,25 +10,7 @@ export default function About() {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-[#f5f5f7]">
-      <header className="w-full py-8 px-6">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-3xl font-semibold text-[#1d1d1f] tracking-tight hover:text-gray-600 transition-colors">
-            Lumalima
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link href="/about" className="text-[#1d1d1f] font-medium">
-              {t('nav.about')}
-            </Link>
-            <Link href="/services" className="text-[#1d1d1f] hover:text-gray-600 transition-colors">
-              {t('nav.services')}
-            </Link>
-            <Link href="/contact" className="text-[#1d1d1f] hover:text-gray-600 transition-colors">
-              {t('nav.contact')}
-            </Link>
-            <LanguageSwitcher />
-          </nav>
-        </div>
-      </header>
+      <Navigation activeRoute="about" />
 
       <main className="w-full px-6 pb-16">
         <div className="max-w-4xl mx-auto">
