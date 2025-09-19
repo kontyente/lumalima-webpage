@@ -60,7 +60,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f7]">
-      <Navigation />
+      <Navigation activeRoute="services" />
 
       <main className="w-full px-6 pb-16">
         <div className="max-w-6xl mx-auto">

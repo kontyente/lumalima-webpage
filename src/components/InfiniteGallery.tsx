@@ -149,19 +149,19 @@ export default function InfiniteGallery({ images, title, description }: Infinite
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="text-left">
+      <div className="text-left px-4 md:px-6">
         <div className="flex items-baseline gap-2">
           <h3 className="text-3xl font-medium text-[#1d1d1f] tracking-tight">
             {title}.
           </h3>
-          <p className="text-3xl text-gray-600">
+          <p className="text-3xl text-gray-600 text-justify">
             {description}.
           </p>
         </div>
       </div>
 
       {/* Gallery Container */}
-      <div className="relative group">
+      <div className="relative group px-4 md:px-6">
         {/* Left Arrow */}
         <button
           onClick={() => handleManualScroll('left')}
@@ -185,7 +185,7 @@ export default function InfiniteGallery({ images, title, description }: Infinite
         {/* Scroll Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
+          className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth md:gap-6"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -198,10 +198,10 @@ export default function InfiniteGallery({ images, title, description }: Infinite
             return (
               <div
                 key={`${imageData.originalIndex}-${imageData.setIndex}`} // Stable key based on position, not src
-                className="flex-shrink-0 w-[calc(100vw/3.5-1rem)] md:w-[calc(100%/3.5-1rem)] aspect-[4/5] relative cursor-pointer group/item"
+                className="flex-shrink-0 w-[calc(100vw/3.5-2rem)] md:w-[calc(100%/3.5-3rem)] aspect-[4/5] relative cursor-pointer group/item"
                 onClick={() => handleImageClick(imageData)}
               >
-                <div className="relative w-full h-full rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl">
+                <div className="relative w-full h-full rounded-t-2xl rounded-b-2xl overflow-hidden transition-all duration-500 hover:shadow-xl">
                   {/* Loading state */}
                   {!isLoaded && !hasError && (
                     <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
@@ -226,7 +226,7 @@ export default function InfiniteGallery({ images, title, description }: Infinite
                       src={imageData.src}
                       alt={`${title} image ${imageData.originalIndex + 1}`}
                       fill
-                      className={`object-cover gallery-image ${
+                      className={`object-cover object-center w-full h-full gallery-image ${
                         isLoaded ? 'opacity-100' : 'opacity-0'
                       }`}
                       priority={index < 6} // Prioritize first 6 visible images
