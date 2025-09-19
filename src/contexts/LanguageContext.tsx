@@ -231,8 +231,6 @@ Proper maintenance extends system lifespan, maintains energy efficiency and ensu
     'public.description': 'Design lighting that brings communities together and creates safe, welcoming public environments.',
     'public.museums': 'Museums',
     'public.museums.desc': 'Cultural and exhibition spaces',
-    'public.libraries': 'Libraries',
-    'public.libraries.desc': 'Educational and community centers',
     'public.parks': 'Parks',
     'public.parks.desc': 'Public recreational areas',
     
@@ -424,8 +422,6 @@ A manutenção adequada prolonga a vida útil dos sistemas, mantém a eficiênci
     'public.description': 'Projete iluminação que une comunidades e cria ambientes públicos seguros e acolhedores.',
     'public.museums': 'Museus',
     'public.museums.desc': 'Espaços culturais e de exposição',
-    'public.libraries': 'Bibliotecas',
-    'public.libraries.desc': 'Centros educacionais e comunitários',
     'public.parks': 'Parques',
     'public.parks.desc': 'Áreas recreativas públicas',
     
@@ -618,8 +614,6 @@ Ordnungsgemäße Wartung verlängert die Systemlebensdauer, erhält die Energiee
     'public.description': 'Entwerfen Sie Beleuchtung, die Gemeinden zusammenbringt und sichere, einladende öffentliche Umgebungen schafft.',
     'public.museums': 'Museen',
     'public.museums.desc': 'Kultur- und Ausstellungsräume',
-    'public.libraries': 'Bibliotheken',
-    'public.libraries.desc': 'Bildungs- und Gemeindezentren',
     'public.parks': 'Parks',
     'public.parks.desc': 'Öffentliche Erholungsgebiete',
     

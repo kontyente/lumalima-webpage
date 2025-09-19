@@ -8,14 +8,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 // Generate museum image paths
 const museumImages = Array.from({ length: 8 }, (_, i) => `/assets/museums/${i + 1}.jpg`);
 
-// Generate library image paths
-const libraryImages = Array.from({ length: 6 }, (_, i) => `/assets/libraries/${i + 1}.jpg`);
-
 // Generate park image paths
 const parkImages = Array.from({ length: 10 }, (_, i) => `/assets/parks/${i + 1}.jpg`);
 
 // Debug: log the generated paths
-console.log('Generated public image paths:', { museumImages, libraryImages, parkImages });
+console.log('Generated public image paths:', { museumImages, parkImages });
 
 export default function Public() {
   const { t } = useLanguage();
@@ -44,13 +41,6 @@ export default function Public() {
               images={museumImages}
               title={t('public.museums')}
               description={t('public.museums.desc')}
-            />
-
-            {/* Libraries Gallery */}
-            <InfiniteGallery
-              images={libraryImages}
-              title={t('public.libraries')}
-              description={t('public.libraries.desc')}
             />
 
             {/* Parks Gallery */}
