@@ -18,24 +18,32 @@ export default function Navigation({ activeRoute }: NavigationProps) {
           Lumalima
         </Link>
         <nav className="flex items-center gap-6">
-          <Link 
-            href="/about" 
+          <Link
+            href="/"
+            className={`text-[#1d1d1f] hover:text-gray-600 transition-colors ${
+              activeRoute === 'home' ? 'font-medium' : ''
+            }`}
+          >
+            {t('nav.solutions')}
+          </Link>
+          <Link
+            href="/about"
             className={`text-[#1d1d1f] hover:text-gray-600 transition-colors ${
               activeRoute === 'about' ? 'font-medium' : ''
             }`}
           >
             {t('nav.about')}
           </Link>
-          <Link 
-            href="/services" 
+          <Link
+            href="/services"
             className={`text-[#1d1d1f] hover:text-gray-600 transition-colors ${
               activeRoute === 'services' ? 'font-medium' : ''
             }`}
           >
             {t('nav.services')}
           </Link>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className={`text-[#1d1d1f] hover:text-gray-600 transition-colors ${
               activeRoute === 'contact' ? 'font-medium' : ''
             }`}

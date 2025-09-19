@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import CategoryCard from "@/components/CategoryCard";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Navigation from "@/components/Navigation";
 import ImagePreloader from "@/components/ImagePreloader";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -47,30 +47,14 @@ export default function Home() {
   }
   return (
     <div className="min-h-screen bg-[#f5f5f7]">
-      <header 
-        className={`w-full py-8 px-6 transition-all duration-700 ease-out relative ${
+      <div
+        className={`transition-all duration-700 ease-out relative ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}
         style={{ zIndex: 1000 }}
       >
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-semibold text-[#1d1d1f] tracking-tight">
-            Lumalima
-          </h1>
-          <nav className="flex items-center gap-6 relative" style={{ zIndex: 1001 }}>
-            <Link href="/about" className="text-[#1d1d1f] hover:text-gray-600 transition-colors">
-              {t('nav.about')}
-            </Link>
-            <Link href="/services" className="text-[#1d1d1f] hover:text-gray-600 transition-colors">
-              {t('nav.services')}
-            </Link>
-            <Link href="/contact" className="text-[#1d1d1f] hover:text-gray-600 transition-colors">
-              {t('nav.contact')}
-            </Link>
-            <LanguageSwitcher />
-          </nav>
-        </div>
-      </header>
+        <Navigation activeRoute="home" />
+      </div>
 
       <main className="w-full px-6 pb-16">
         <div className="max-w-7xl mx-auto">

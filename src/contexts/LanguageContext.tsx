@@ -70,6 +70,7 @@ export function useLanguage() {
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
+    'nav.solutions': 'Solutions',
     'nav.about': 'About',
     'nav.services': 'Services',
     'nav.contact': 'Contact',
@@ -218,6 +219,7 @@ const translations: Record<Language, Record<string, string>> = {
   
   pt: {
     // Navigation
+    'nav.solutions': 'Soluções',
     'nav.about': 'Sobre',
     'nav.services': 'Serviços',
     'nav.contact': 'Contacto',
@@ -365,6 +367,7 @@ const translations: Record<Language, Record<string, string>> = {
   
   de: {
     // Navigation
+    'nav.solutions': 'Lösungen',
     'nav.about': 'Über uns',
     'nav.services': 'Dienstleistungen',
     'nav.contact': 'Kontakt',
